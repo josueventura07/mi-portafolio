@@ -5,12 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
+    <script src="https://kit.fontawesome.com/84b3f3b50e.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header class="header_container">
         <nav class="nav">
-            <ul class="navbar">
+            <div class="dark-mode_container">
+                <div class="dark-mode-into">
+                    <i class="fa-regular fa-sun"></i>
+                    <i class="dark fa-regular fa-moon"></i>
+                    <div class="btn_dark-mode"></div>
+                </div>
+                <i class='bx bx-menu'></i>
+            </div>
+            <ul class="navbar navbar_hidden">
+                <i class="fa-solid fa-xmark"></i>
                 <li class="nav_list"><a href="#home">Home</a></li>
                 <li class="nav_list"><a href="#about">About</a></li>
                 <li class="nav_list"><a href="#skills">Skills</a></li>
@@ -19,20 +30,53 @@
         </nav>
     </header>
     <section id="home" class="home">
-        <img src="" alt="">
         <div class="body_home">
-            <h1>Home</h1>
+            <div class="slider_container">
+                <button class="slider_prev">&#60;</button>
+                <div class="slider_static">
+                    <div class="slider_traslateX">
+                        <div class="slider_img-container">
+                            <div class="temporal"> 
+                                <h1>Hola, Soy Desarrollador Web</h1> </div>
+                            </div>
+                        <div class="slider_img-container">
+                            
+                            <div class="temporal"> <h1>Centro</h1> </div>
+                            
+                        </div>
+                        <div class="slider_img-container">
+                            
+                            <div class="temporal"> <h1>Izquierda</h1> </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="slider_next">&#62;</button>
+            </div>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="body_about">
-            <h1>About</h1>
+            <div class="about_container">
+                <div class="about_img-container">
+                    <img class="about_img" src="./img_profile/josue logo.jpg" alt="">
+                </div>
+                <div class="about_info">
+                    <h2>About Me</h2>
+                </div>
+            </div>
         </div>
     </section>
     <section id="skills" class="skills">
         <div class="body_skills">
-            <h1>Skills</h1>
+            <div class="skills_container">
+                <div class="skills_tech-container">
+                    <div> <h2>Tecnologias</h2> </div>
+                </div>
+                <div class="skills_portafolio-container">
+                    <h2>Portafolio</h2>
+                </div>
+            </div>
         </div>
     </section>
     <section id="contact" class="contact">
@@ -49,14 +93,19 @@
                 </div>
                 <div class="form_text">
                     <label class="from_labels" for="text">Gracias por visitar mi blog, dime, en que te puedo ayudar</label>
-                    <textarea class="form_text-input" placeholder="Escribeme" name="" id="" cols="30" rows="10"></textarea>
+                    <textarea class="form_text-input" placeholder="Escribeme..." name="" id="" cols="30" rows="10"></textarea>
                 </div>
                 <button class="btn_submit">Enviar</button>
             </form>
         </div>
     </section>
     <footer class="footer_container">
-
+        <div>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+           
+        </div>
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>
