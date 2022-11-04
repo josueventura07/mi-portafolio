@@ -1,11 +1,17 @@
 const openMenu = document.querySelector('.bx-menu');
 const navBar = document.querySelector('.navbar');
 const closeMenu = document.querySelector('.fa-xmark');
-const btnDarkMode = document.querySelector('.btn_dark-mode')
-const sliderCircleBottomContainer = document.querySelectorAll('.slider_circle-bottom-container')
-const sliderNext = document.querySelector('.slider_next')
-const sliderImgContainer = document.querySelector('.slider_img-container')
+const btnDarkMode = document.querySelector('.btn_dark-mode');
+const sliderTrasnlateX = document.querySelectorAll('.slider_container');
+const sliderPrev = document.querySelector('.slider_prev');
+const sliderNext = document.querySelector('.slider_next');
+const sliderTrasnlateContainer = document.querySelector('.slider_traslateX');
+const sliders = [...document.querySelectorAll('.slider_img-container')];
 
+
+
+
+let value;
 
 
 openMenu.addEventListener('click', (e) => {
@@ -22,12 +28,44 @@ btnDarkMode.addEventListener('click', (e) => {
 
 
 
-sliderCircleBottomContainer.forEach((mainbtn, i) => {
-    sliderCircleBottomContainer[i].addEventListener('click', () => {
+sliderTrasnlateX.forEach(trasnlateX => {
+    trasnlateX.addEventListener('click', (e) => {
         
-        let position = i
-        let operation = position * -50
+        let position = e.target
+       
 
-        sliderImgContainer.style.transform = `traslateX(${operation}%)`
+        if(position === sliderPrev) {
+            position = 0
+            
+        }
+        
+        if(position === sliderNext) {
+            position = 1
+        }
+        let operation = position * -50
+        
+        // function changePosition(position) {
+        //     const currentElement = Number(document.querySelector('.body_img').dataset.id);
+
+        //     value = currentElement;
+        //     value += position;
+
+            
+        //     if(value === 0 || value === sliders.length+1) {
+        //         value = value === 0 ? sliders.length : 1
+        //     }
+            
+        //     sliderTrasnlateContainer[currentElement-1].style.transform = `translateX(${value * -16.5}%)`;
+        //     sliderTrasnlateContainer[value-1].style.transform = `translateX(${value * -66.67}%)`;
+        //     return value
+        // }
+        // console.log(changePosition(position))
+
+        
+        sliderTrasnlateContainer.style.transform = `translateX(${operation}%)`
+
+       
     })
-});
+
+})
+

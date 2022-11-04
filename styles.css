@@ -47,7 +47,7 @@ a {
 .dark-mode_container {
     position: absolute;
     top: 30%;
-    left: 5%;
+    right: 5%;
     width: 45px;
     height: 25px;
     display: flex;
@@ -220,43 +220,38 @@ a {
     padding: 50px;
     background-color: rgb(245, 222, 179, 0.06);
     position: relative;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    background-color: #ccc1;
 }
 
 .slider_static {
     width: 100%;
     max-width: 500px;
     height: 100%;
-    border: 1px solid white;
+    
     margin: auto;
     
-    overflow: hidden;
+   overflow: hidden;
 }
 
 .slider_traslateX {
     display: flex;
-    width: 300%;
+    width: 200%;
     height: 100%;
     
+    transition: transform 1000ms ease;
 }
 
 .slider_img-container {
-    width: calc(300% / 3);
+    width: calc(200% / 2);
     padding: 10px;
     display: flex;
     
     gap: 1rem;
     
-    transition: transform 1000ms ease;
+    
 }
-
-.slider_btn_prev {
-   transform: translateX(-100%);
-}
-
-.slider_btn_next {
-    transform: translateX(-200%);
- }
-
 
 .temporal {
     width: 100%;
@@ -288,6 +283,7 @@ a {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 1000;
 }
 
 /* .slider_prev:hover,
@@ -340,6 +336,9 @@ a {
     align-items: center;
     padding: 10px;
     gap: 10px;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    background-color: #ccc1;
 }
 
 .about_img-container {
@@ -347,6 +346,10 @@ a {
     max-width: 300px;
     height: 25%;
     box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    overflow: hidden;
+    
 }
 
 .about_img {
@@ -360,6 +363,7 @@ a {
     max-width: 724px;
     height: 70%;
     border: 1px solid wheat;
+    border-radius: 10px;
 }
 
 .body_skills {
@@ -379,6 +383,9 @@ a {
     align-items: center;
     padding: 10px;
     gap: 10px;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    background-color: #ccc1;
 }
 
 .skills_tech-container {
@@ -392,6 +399,7 @@ a {
     flex-wrap: wrap;
     gap: 10px;
     padding: 20px;
+    
 }
 
 .skills_tech-img {
@@ -403,6 +411,7 @@ a {
     background-color: rgba(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
+    
 }
 
 
@@ -412,6 +421,8 @@ a {
     height: 70%;
     background-color: rgba(255, 255, 255);
     border-radius: 10px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    
 }
 
 .body_contact {
@@ -477,7 +488,7 @@ a {
     display: flex;
     flex-direction: column;
     
-    filter: blur(0.07px);
+    
     margin-top: 10px;
 }
 
@@ -561,8 +572,8 @@ a {
 
     .dark-mode_container {
         top: 80px;
-        left: auto;
-        right: 5%;
+        
+        
     }
 
     .bx-menu {
