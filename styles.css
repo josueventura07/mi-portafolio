@@ -382,46 +382,36 @@ a {
 }
 
 .skills_tech-container {
+    
     width: 100%;
-    max-width: 300px;
+    max-width: 280px;
     height: 30%;
+    border-radius: 10px;
     border: 1px solid wheat;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 20px;
 }
 
-.fa-brands {
+.skills_tech-img {
+    display: block;
     width: 100%;
-    aspect-ratio: 1;
+    max-width: 50px;
+    height: 100%;
+    max-height: 50px;
+    background-color: rgba(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
 }
 
-.fa-js {
-    
-    
-    color: yellow;
-    font-size: 70px;
-    display: block;
-}
-
-.fa-css3-alt {
-    color: blue;
-    font-size: 70px;
-    display: block;
-}
-
-.fa-html5 {
-    color: rgb(226, 10, 10);
-    font-size: 70px;
-    display: block;
-}
 
 .skills_portafolio-container {
     width: 100%;
-    max-width: 724px;
+    max-width: 744px;
     height: 70%;
-    border: 1px solid wheat;
+    background-color: rgba(255, 255, 255);
+    border-radius: 10px;
 }
 
 .body_contact {
@@ -536,7 +526,7 @@ a {
 }
 
 
-@media (min-width: 480px) {
+@media (min-width: 550px) {
 
     .header_container {
         width: 100%;
@@ -605,6 +595,14 @@ a {
         height: 70%;
     }
 
+    .skills_tech-img {
+        
+        
+        max-width: 100px;
+        padding: 10px;
+        max-height: 100px;
+    }
+
     .form_container{
         max-height: 450px;
         display: grid;
@@ -625,3 +623,4 @@ a {
        
     }
 }
+
