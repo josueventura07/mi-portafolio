@@ -7,7 +7,7 @@ const sliderPrev = document.querySelector('.slider_prev');
 const sliderNext = document.querySelector('.slider_next');
 const sliderTrasnlateContainer = document.querySelector('.slider_traslateX');
 const sliders = [...document.querySelectorAll('.slider_img-container')];
-
+const navList = document.querySelectorAll('.nav_list')
 
 
 
@@ -24,6 +24,13 @@ closeMenu.addEventListener('click', (e) => {
 
 btnDarkMode.addEventListener('click', (e) => {
     btnDarkMode.classList.toggle('btn_dark-mode-change')
+});
+
+navList.forEach(element => {
+    element.addEventListener('click', (e) => {
+        console.log(e.target)
+        navBar.classList.toggle('navbar_hidden')
+    });
 });
 
 
