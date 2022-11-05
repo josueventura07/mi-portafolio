@@ -87,7 +87,7 @@ a {
 
 .bx-menu {
     position: absolute;
-    top: 115%;
+    top: 100%;
     right: 5%;
     font-size: 45px;
     color: wheat;
@@ -260,6 +260,8 @@ a {
     justify-content: center;
     align-items: center;
     background-color: rgb(245, 222, 179, 0.06);
+    color: wheat;
+    font-size: 30px;
 }
 
 /* .slider_imgs {
@@ -366,6 +368,8 @@ a {
     height: 70%;
     border: 1px solid wheat;
     border-radius: 10px;
+    box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    background-color: white;
 }
 
 .body_skills {
@@ -421,11 +425,87 @@ a {
     width: 100%;
     max-width: 744px;
     height: 70%;
-    background-color: rgba(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
     box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
     
 }
+
+.skills_portafolio-title{
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    color: yellow;
+    -webkit-text-stroke: blue 1px;
+    font-size: 50px;
+    
+}
+
+.skills_portafolio-samples{
+    width: 100%;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: auto;
+    padding: 20px;
+    
+}
+
+.skills_portafolio-card{
+    box-sizing: border-box;
+    width: 100px;
+    
+    margin: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 200ms ease;
+    
+}
+
+.skills_portafolio-card:hover {
+    transform: scale(1.2);
+    transition: transform 200ms ease;
+    
+    z-index: 5000;
+}
+
+#card2 {
+    position: relative;
+}
+
+.card_info2 {
+    position: absolute;
+    
+    border: solid 1px beige;
+    width: 100%;
+    
+    
+}
+
+.card_info2:hover {
+    transform: translateY(3%);
+    
+}
+
+.skills_portafolio-img{
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
 
 .body_contact {
     display: flex;
@@ -515,8 +595,8 @@ a {
 .btn_submit {
     width: 150px;
     height: 35px;
-    margin-top: 10px;
-    margin-left: 80px;
+    margin-top: 5%;
+    margin-left: 25%;
     background-color: rgb(248, 77, 9);
     box-shadow: 0px 3px 5px 0px #0005;
     border: none;
@@ -536,8 +616,24 @@ a {
     width: 100%;
     height: 100px;
     margin: auto;
+    background-color: rgba(11, 11, 24, 0.5);
 }
 
+.footer_socials {
+    width: 100%;
+    max-width: 200px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.fa-brands {
+    color: wheat;
+    font-size: 50px;
+}
 
 @media (min-width: 550px) {
 
@@ -573,7 +669,7 @@ a {
     }
 
     .dark-mode_container {
-        top: 80px;
+        top: 70px;
         
         
     }
@@ -614,6 +710,20 @@ a {
         max-width: 100px;
         padding: 10px;
         max-height: 100px;
+    }
+
+    .skills_portafolio-samples{
+        display: flex;
+        flex-wrap: nowrap;
+        
+        
+    }
+
+    .skills_portafolio-card{
+        
+        width: 100%;
+        
+        
     }
 
     .form_container{

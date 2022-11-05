@@ -28,7 +28,6 @@ btnDarkMode.addEventListener('click', (e) => {
 
 navList.forEach(element => {
     element.addEventListener('click', (e) => {
-        console.log(e.target)
         navBar.classList.toggle('navbar_hidden')
     });
 });
