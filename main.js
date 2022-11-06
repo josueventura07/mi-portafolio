@@ -51,16 +51,33 @@ sliderTrasnlateX.forEach(trasnlateX => {
         let operation = position * -50
         
         // function changePosition(position) {
+            
         //     const currentElement = Number(document.querySelector('.body_img').dataset.id);
 
         //     value = currentElement;
         //     value += position;
 
-            
-        //     if(value === 0 || value === sliders.length+1) {
-        //         value = value === 0 ? sliders.length : 1
+        //    const prevPosition = (value) => {
+        //     if(value -1 < 0) {
+        //         value = sliders.length -1
+        //     } else {
+        //         value = -1
         //     }
-            
+        //    }
+
+        //    const nextPosition = (value) =>  {
+        //     if(value +1 > sliders.length -1) {
+        //         value = 0
+        //     } else {
+        //         value = +1
+        //     }
+        //    }
+
+          
+            // if(value === 0 || value === sliders.length+1) {
+            //     value = value === 0 ? sliders.length : 1
+            // }
+           
         //     sliderTrasnlateContainer[currentElement-1].style.transform = `translateX(${value * -16.5}%)`;
         //     sliderTrasnlateContainer[value-1].style.transform = `translateX(${value * -66.67}%)`;
         //     return value
