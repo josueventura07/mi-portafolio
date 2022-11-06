@@ -8,8 +8,23 @@ const sliderNext = document.querySelector('.slider_next');
 const sliderTrasnlateContainer = document.querySelector('.slider_traslateX');
 const sliders = [...document.querySelectorAll('.slider_img-container')];
 const navList = document.querySelectorAll('.nav_list')
+const nav = document.querySelector('.nav');
+const home =document.querySelector('.home');
+const about = document.querySelector('.about');
+const skills = document.querySelector('.skills');
+const contact = document.querySelector('.contact');
 
 
+
+btnDarkMode.addEventListener('click', (e) => {
+    nav.classList.toggle('dark_mode-nav')
+    home.classList.toggle('bgHomeDarkMode')
+    about.classList.toggle('bgAboutDarkMode')
+    skills.classList.toggle('bgSkillsDarkMode')
+    contact.classList.toggle('bgContactDarkMode')
+
+
+})
 
 let value;
 
