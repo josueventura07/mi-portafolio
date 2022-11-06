@@ -21,11 +21,15 @@ a {
     --bg-home: url(./bg_images/christopher-gower-m_HRfLhgABo-unsplash.jpg);
     --bg-about: url(./bg_images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg);
     --bg-skills: url(./bg_images/mia-baker-cqkbESEkhjk-unsplash.jpg);
-    --bg-contact: url(./bg_images/stephen-phillips-hostreviews-co-uk-3Mhgvrk4tjM-unsplash.jpg);
+    --bg-contact: url(./bg_images/melinda-gimpel-5Ne6mMQtIdo-unsplash.jpg);
     --bg-nav: rgba(192, 59, 6, 80%);
     --bg-navList-hover: wheat;
     --bg-navBar: rgba(245, 222, 179, 70%);
     --bg-darkMode: rgba(192, 59, 6, 80%);
+    --bg-slider: linear-gradient(200deg, rgb(13, 13, 172, 0.3) 0.92%, rgb(0, 204, 255, 0.3) 27.96%, rgb(8, 8, 116, 0.3) 99.08%);
+    --bgPortafolio: linear-gradient(200deg, rgb(13, 13, 172, 2) 0.92%, rgb(0, 204, 255, 0.6) 27.96%, rgb(8, 8, 116, 0.5) 99.08%);
+    --slider-color: rgba(192, 59, 6, 0.911);
+    --colorMenu: rgba(192, 59, 6);
     
     /*-------Dark Mode---------*/
     --bg-navDark: #ccc4;
@@ -33,7 +37,10 @@ a {
     --bg-aboutDark: url(./bg_images/blake-connally-B3l0g6HLxr8-unsplash.jpg);
     --bg-skillsDark: url(./bg_images/blake-connally-IKUYGCFmfw4-unsplash.jpg);
     --bg-contactDark: url(./bg_images/lautaro-andreani-xkBaqlcqeb4-unsplash.jpg);
-
+    --bg-sliderDark: rgb(245, 222, 179, 0.06);
+    --bgPortafolioDark: rgba(255, 255, 255, 0.5);
+    --slider-colorDark: wheat;
+    --colorMenuDark: wheat;
 }
 
 
@@ -108,8 +115,12 @@ a {
     top: 100%;
     right: 5%;
     font-size: 45px;
-    color: wheat;
+    color: var(--colorMenu);
     
+}
+
+.bx-menuDark {
+    color: var(--colorMenuDark);
 }
 
 .fa-sun {
@@ -292,19 +303,18 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(245, 222, 179, 0.06);
-    color: wheat;
+    background: var(--bg-slider);
+    color: var(--slider-color);
+    -webkit-text-stroke: 0.5px white;
     font-size: 25px;
     padding: 10px;
     text-align: center;
 }
 
-/* .slider_imgs {
-    display: block;
-    width: 33%;
-    height: 100%;
-
-} */
+.bgSliderDarkMode {
+    background: var(--bg-sliderDark);
+    color: var(--slider-colorDark);
+}
 
 .slider_prev,
 .slider_next {
@@ -510,7 +520,7 @@ a {
     width: 100%;
     max-width: 744px;
     height: 70%;
-    background-color: rgba(255, 255, 255, 0.5);
+    background: var(--bgPortafolio);
     border-radius: 10px;
     box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
     display: grid;
@@ -519,6 +529,10 @@ a {
     padding-right: 20px;
     padding-left: 20px;
     
+}
+
+.bgPortafolioDarkMode {
+    background: var(--bgPortafolioDark);
 }
 
 .skills_portafolio-title{

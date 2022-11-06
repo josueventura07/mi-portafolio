@@ -13,7 +13,9 @@ const home =document.querySelector('.home');
 const about = document.querySelector('.about');
 const skills = document.querySelector('.skills');
 const contact = document.querySelector('.contact');
-
+const bgSlider = document.querySelector('.temporal');
+const bgPortafolio = document.querySelector('.skills_portafolio-container')
+const bxMenu = document.querySelector('.bx-menu');
 
 
 btnDarkMode.addEventListener('click', (e) => {
@@ -22,8 +24,9 @@ btnDarkMode.addEventListener('click', (e) => {
     about.classList.toggle('bgAboutDarkMode')
     skills.classList.toggle('bgSkillsDarkMode')
     contact.classList.toggle('bgContactDarkMode')
-
-
+    bgSlider.classList.toggle('bgSliderDarkMode')
+    bgPortafolio.classList.toggle('bgPortafolioDarkMode')
+    bxMenu.classList.toggle('bx-menuDark')
 })
 
 let value;
