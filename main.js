@@ -3,10 +3,12 @@ const navBar = document.querySelector('.navbar');
 const closeMenu = document.querySelector('.fa-xmark');
 const btnDarkMode = document.querySelector('.btn_dark-mode');
 const sliderTrasnlateX = document.querySelectorAll('.slider_container');
-const sliderPrev = document.querySelector('.slider_prev');
-const sliderNext = document.querySelector('.slider_next');
-const sliderTrasnlateContainer = document.querySelector('.slider_traslateX');
-const sliders = [...document.querySelectorAll('.slider_img-container')];
+
+
+
+// const sliders = [...document.querySelectorAll('.slider_img-container')];
+
+
 const navList = document.querySelectorAll('.nav_list')
 const nav = document.querySelector('.nav');
 const home =document.querySelector('.home');
@@ -16,9 +18,50 @@ const contact = document.querySelector('.contact');
 const bgSlider = document.querySelector('.temporal');
 const bgPortafolio = document.querySelector('.skills_portafolio-container')
 const bxMenu = document.querySelector('.bx-menu');
+/*------Slider-------------*/
+const sliderPrev = document.querySelector('.slider_prev');
+const sliderNext = document.querySelector('.slider_next');
+const sliderTrasnlateContainer = document.querySelector('.slider_traslateX');
+let sliderSection = document.querySelectorAll('.slider_img-container');
+let sliderSectionLast = sliderSection[sliderSection.length - 1]
 
+sliderTrasnlateContainer.insertAdjacentElement('afterbegin', sliderSectionLast);
 
-btnDarkMode.addEventListener('click', (e) => {
+function Prev() {
+    let sliderSectionFirst = document.querySelectorAll('.slider_traslateX');
+    let sliderSectionLast = sliderSection[sliderSection.length - 1]
+        sliderTrasnlateContainer.style.marginLeft = "0";
+        sliderTrasnlateContainer.style.transition = "all 0.5s";
+    setTimeout(function() {
+        sliderTrasnlateContainer.style.marginLeft = "none";
+        sliderTrasnlateContainer.insertAdjacentElement('afterbegin', sliderSectionLast);
+        sliderTrasnlateContainer.style.marginLeft = "-100%";
+         
+    }, 5000);
+}
+
+function Next() {
+    let sliderSectionFirst = document.querySelectorAll('.slider_traslateX')[0];
+        sliderTrasnlateContainer.style.marginLeft = "-200%";
+        sliderTrasnlateContainer.style.transition = "all 0.5s";
+    setTimeout(function() {
+        sliderTrasnlateContainer.style.marginLeft = "none";
+        sliderTrasnlateContainer.insertAdjacentElement('beforeend', sliderSectionFirst);
+        sliderTrasnlateContainer.style.marginLeft = "-100%";
+         
+    }, 5000);
+}
+
+sliderPrev.addEventListener('click', (e) => {
+    Prev()
+});
+
+sliderNext.addEventListener('click', (e) => {
+    Next()
+});
+
+/*------Dark Mode----------*/
+function darkModeSwitch() {
     nav.classList.toggle('dark_mode-nav')
     home.classList.toggle('bgHomeDarkMode')
     about.classList.toggle('bgAboutDarkMode')
@@ -27,6 +70,10 @@ btnDarkMode.addEventListener('click', (e) => {
     bgSlider.classList.toggle('bgSliderDarkMode')
     bgPortafolio.classList.toggle('bgPortafolioDarkMode')
     bxMenu.classList.toggle('bx-menuDark')
+}
+
+btnDarkMode.addEventListener('click', (e) => {
+    darkModeSwitch();
 })
 
 let value;
@@ -59,13 +106,15 @@ sliderTrasnlateX.forEach(trasnlateX => {
        
 
         if(position === sliderPrev) {
-            position = 0
-            
+           
+           
         }
         
         if(position === sliderNext) {
-            position = 1
+            
+           
         }
+        
         let operation = position * -50
         
         // function changePosition(position) {
@@ -83,14 +132,6 @@ sliderTrasnlateX.forEach(trasnlateX => {
         //     }
         //    }
 
-        //    const nextPosition = (value) =>  {
-        //     if(value +1 > sliders.length -1) {
-        //         value = 0
-        //     } else {
-        //         value = +1
-        //     }
-        //    }
-
           
             // if(value === 0 || value === sliders.length+1) {
             //     value = value === 0 ? sliders.length : 1
@@ -103,7 +144,7 @@ sliderTrasnlateX.forEach(trasnlateX => {
         // console.log(changePosition(position))
 
         
-        sliderTrasnlateContainer.style.transform = `translateX(${operation}%)`
+        // sliderTrasnlateContainer.style.transform = `translateX(${operation}%)`
 
        
     })
