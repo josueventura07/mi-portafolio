@@ -32,26 +32,26 @@ function Prev() {
     let sliderSection = document.querySelectorAll('.slider_img-container');
     let sliderSectionLast = sliderSection[sliderSection.length - 1]
         sliderTrasnlateContainer.style.marginLeft = "0";
-        sliderTrasnlateContainer.style.transition = "all 0.9s";
+        sliderTrasnlateContainer.style.transition = "all 0.5s";
     setTimeout(function() {
         sliderTrasnlateContainer.style.marginLeft = "none";
         sliderTrasnlateContainer.insertAdjacentElement('afterbegin', sliderSectionLast);
         sliderTrasnlateContainer.style.marginLeft = "-100%";
         
-    }, 900);
+    }, 500);
 }
 
 function Next() {
     let sliderSectionFirst = document.querySelectorAll('.slider_img-container')[0];
     
         sliderTrasnlateContainer.style.marginLeft = "-200%";
-        sliderTrasnlateContainer.style.transition = "all 0.9s";
+        sliderTrasnlateContainer.style.transition = "all 0.5s";
     setTimeout(function() {
         sliderTrasnlateContainer.style.marginLeft = "none";
         sliderTrasnlateContainer.insertAdjacentElement('beforeend', sliderSectionFirst);
         sliderTrasnlateContainer.style.marginLeft = "-100%";
         
-    }, 900);
+    }, 500);
 }
 
 sliderPrev.addEventListener('click', (e) => {
