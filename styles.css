@@ -276,14 +276,14 @@ a {
     
     margin: auto;
     
-   
+   overflow: hidden;
 }
 
 .slider_traslateX {
     display: flex;
     width: 300%;
     height: 100%;
-    margin-left: -100%;
+   
     
 }
 
