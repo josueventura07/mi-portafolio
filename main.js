@@ -15,7 +15,7 @@ const home =document.querySelector('.home');
 const about = document.querySelector('.about');
 const skills = document.querySelector('.skills');
 const contact = document.querySelector('.contact');
-const bgSlider = document.querySelector('.temporal');
+const bgSlider = document.querySelectorAll('.temporal');
 const bgPortafolio = document.querySelector('.skills_portafolio-container')
 const bxMenu = document.querySelector('.bx-menu');
 
@@ -54,6 +54,7 @@ function Next() {
     }, 500);
 }
 
+
 sliderPrev.addEventListener('click', (e) => {
     Prev()
 });
@@ -62,6 +63,11 @@ sliderNext.addEventListener('click', (e) => {
     Next()
 });
 
+setInterval(() => {
+    Next()
+}, 20000);
+
+
 /*------Dark Mode----------*/
 function darkModeSwitch() {
     nav.classList.toggle('dark_mode-nav')
@@ -69,7 +75,10 @@ function darkModeSwitch() {
     about.classList.toggle('bgAboutDarkMode')
     skills.classList.toggle('bgSkillsDarkMode')
     contact.classList.toggle('bgContactDarkMode')
-    bgSlider.classList.toggle('bgSliderDarkMode')
+    bgSlider.forEach(element => {
+        element.classList.toggle('bgSliderDarkMode')
+    });
+    
     bgPortafolio.classList.toggle('bgPortafolioDarkMode')
     bxMenu.classList.toggle('bx-menuDark')
 }

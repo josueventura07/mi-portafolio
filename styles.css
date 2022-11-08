@@ -19,14 +19,14 @@ a {
 
 :root {
     --bg-home: url(./bg_images/christopher-gower-m_HRfLhgABo-unsplash.jpg);
-    --bg-about: url(./bg_images/hal-gatewood-tZc3vjPCk-Q-unsplash.jpg);
-    --bg-skills: url(./bg_images/mia-baker-cqkbESEkhjk-unsplash.jpg);
-    --bg-contact: url(./bg_images/melinda-gimpel-5Ne6mMQtIdo-unsplash.jpg);
+    --bg-about: url(./bg_images/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background.jpg);
+    --bg-skills: url(./bg_images/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background.jpg);
+    --bg-contact: url(./bg_images/abstract-grunge-decorative-relief-navy-blue-stucco-wall-texture-wide-angle-rough-colored-background.jpg);
     --bg-nav: rgba(192, 59, 6, 80%);
     --bg-navList-hover: wheat;
     --bg-navBar: rgba(245, 222, 179, 70%);
     --bg-darkMode: rgba(192, 59, 6, 80%);
-    --bg-slider: linear-gradient(200deg, rgb(13, 13, 172, 0.3) 0.92%, rgb(0, 204, 255, 0.3) 27.96%, rgb(8, 8, 116, 0.3) 99.08%);
+    --bg-slider: linear-gradient(200deg, rgb(13, 13, 172, 0.9) 0.92%, rgb(0, 204, 255, 0.9) 27.96%, rgb(8, 8, 116, 0.9) 99.08%);
     --bgPortafolio: linear-gradient(200deg, rgb(13, 13, 172, 2) 0.92%, rgb(0, 204, 255, 0.6) 27.96%, rgb(8, 8, 116, 0.5) 99.08%);
     --slider-color: rgba(192, 59, 6, 0.911);
     --colorMenu: rgba(192, 59, 6);
@@ -34,10 +34,10 @@ a {
     /*-------Dark Mode---------*/
     --bg-navDark: #ccc4;
     --bg-homeDark: url(./bg_images/jefferson-santos-9SoCnyQmkzI-unsplash.jpg);
-    --bg-aboutDark: url(./bg_images/blake-connally-B3l0g6HLxr8-unsplash.jpg);
-    --bg-skillsDark: url(./bg_images/blake-connally-IKUYGCFmfw4-unsplash.jpg);
-    --bg-contactDark: url(./bg_images/lautaro-andreani-xkBaqlcqeb4-unsplash.jpg);
-    --bg-sliderDark: rgb(245, 222, 179, 0.06);
+    --bg-aboutDark: url(./bg_images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    --bg-skillsDark: url(./bg_images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
+    --bg-contactDark: url(./bg_images/melinda-gimpel-5Ne6mMQtIdo-unsplash.jpg);
+    --bg-sliderDark: rgba(66, 64, 58, 0.06);
     --bgPortafolioDark: rgba(255, 255, 255, 0.5);
     --slider-colorDark: wheat;
     --colorMenuDark: wheat;
@@ -63,6 +63,17 @@ a {
     background-color: var(--bg-nav);
     position: relative;
     
+}
+
+.logo {
+    text-transform: uppercase;
+    height: 100%;
+    
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: wheat;
+    -webkit-text-stroke: 1px #0000009;
 }
 
 .dark_mode-nav {
@@ -204,6 +215,7 @@ a {
 .about {
     background-image: var(--bg-about);
     background-position: center;
+    
 }
 
 .bgAboutDarkMode {
@@ -251,6 +263,14 @@ a {
 }
 
 
+.body_about,
+.body_skills,
+.body_contact {
+    
+    background-color: rgba(27, 71, 54, 0.3);
+}
+
+
 .body_home {
     display: flex;
     justify-content: center;
@@ -289,10 +309,10 @@ a {
 
 .slider_img-container {
     width: 100%;
-    padding: 10px;
+    
     display: flex;
     
-    gap: 1rem;
+    
     
     
 }
@@ -339,11 +359,11 @@ a {
 } */
 
 .slider_prev {
-    left: 3%;
+    left: 2%;
 }
 
 .slider_next {
-    right: 3%;
+    right: 2%;
 }
 
 .slider_circle-bottom-container {
@@ -784,6 +804,14 @@ a {
         top: 70px;
         
         
+    }
+
+    .slider_prev {
+        left: 3%;
+    }
+    
+    .slider_next {
+        right: 3%;
     }
 
     .bx-menu {
