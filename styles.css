@@ -562,6 +562,32 @@ a {
     
 }
 
+.skills_tech-img:nth-child(1) {
+    animation-delay: 0;
+}
+
+.skills_tech-img:nth-child(2) {
+    animation-delay: 0.9s;
+}
+
+.skills_tech-img:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.skills_tech-img:nth-child(4) {
+    animation-delay: 0.5s;
+}
+
+.skills_tech-img:nth-child(5) {
+    animation-delay: 0.3s;
+}
+
+.skills_tech-img:nth-child(6) {
+    animation-delay: 0.7s;
+}
+
+
+
 .skills_tech-img:hover {
     animation-play-state: paused;
     border: rgb(33, 128, 218) solid;
@@ -574,7 +600,7 @@ a {
         
    
     100% {
-        transform: translateY(5%);   
+        transform: translateY(3%);   
     }
     
 }
