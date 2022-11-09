@@ -94,10 +94,12 @@ let value;
 
 openMenu.addEventListener('click', (e) => {
     navBar.classList.toggle('navbar_hidden')
+    bxMenu.classList.toggle('bx-menu-hide')
 });
 
 closeMenu.addEventListener('click', (e) => {
     navBar.classList.toggle('navbar_hidden')
+    bxMenu.classList.toggle('bx-menu-hide')
 });
 
 btnDarkMode.addEventListener('click', (e) => {

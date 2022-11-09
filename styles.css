@@ -45,7 +45,9 @@ a {
     --colorMenuDark: wheat;
 }
 
-
+.font-size {
+    font-size: 40px;
+}
 
 /*------------------Styles-------------------------*/
 
@@ -132,6 +134,11 @@ a {
 
 }
 
+.bx-menu-hide {
+    transform: translateX(2000px);
+    
+}
+
 .bx-menuDark {
     color: var(--colorMenuDark);
 }
@@ -163,7 +170,7 @@ a {
     padding-left: 30px;
     transform: translateX(2000px);
     transition: transform 2000ms ease;
-    
+    -webkit-text-stroke: 0.5px #000;
 }
 
 .navbarDarkMode {
@@ -296,6 +303,7 @@ a {
     border-radius: 20px 0px 20px 0px;
     box-shadow: 0px 1px 5px 1px rgba(245, 222, 179, 40%);
     background-color: var(--bg-slider);
+    z-index: 0;
 }
 
 .slider_containerDarkMode {
@@ -338,7 +346,7 @@ a {
     align-items: center;
     /* background: var(--bg-slider); */
     color: var(--slider-color);
-    -webkit-text-stroke: 0.5px rgba(228, 18, 18);
+    -webkit-text-stroke: 0.5px #0009;
     font-size: 25px;
     padding: 10px;
     text-align: center;
@@ -546,7 +554,29 @@ a {
     background-color: rgba(255, 255, 255);
     padding: 5px;
     border-radius: 10px;
+    animation-name: moveTechImg;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    
+}
 
+.skills_tech-img:hover {
+    animation-play-state: paused;
+    border: rgb(33, 128, 218) solid;
+}
+
+@keyframes moveTechImg {
+    0% {
+        transform: translateY(0);
+    }
+        
+   
+    100% {
+        transform: translateY(5%);   
+    }
+    
 }
 
 
