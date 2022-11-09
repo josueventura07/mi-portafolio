@@ -8,7 +8,7 @@ const sliderTrasnlateX = document.querySelectorAll('.slider_container');
 
 // const sliders = [...document.querySelectorAll('.slider_img-container')];
 
-
+const sliderContainer = document.querySelector('.slider_container');
 const navList = document.querySelectorAll('.nav_list')
 const nav = document.querySelector('.nav');
 const home =document.querySelector('.home');
@@ -65,12 +65,13 @@ sliderNext.addEventListener('click', (e) => {
 
 setInterval(() => {
     Next()
-}, 20000);
+}, 10000);
 
 
 /*------Dark Mode----------*/
 function darkModeSwitch() {
     nav.classList.toggle('dark_mode-nav')
+    navBar.classList.toggle('navbarDarkMode')
     home.classList.toggle('bgHomeDarkMode')
     about.classList.toggle('bgAboutDarkMode')
     skills.classList.toggle('bgSkillsDarkMode')
@@ -81,6 +82,7 @@ function darkModeSwitch() {
     
     bgPortafolio.classList.toggle('bgPortafolioDarkMode')
     bxMenu.classList.toggle('bx-menuDark')
+    sliderContainer.classList.toggle('slider_containerDarkMode')
 }
 
 btnDarkMode.addEventListener('click', (e) => {
