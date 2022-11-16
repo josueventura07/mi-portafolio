@@ -19,6 +19,19 @@ const bgSlider = document.querySelectorAll('.temporal');
 const bgPortafolio = document.querySelector('.skills_portafolio-container')
 const bxMenu = document.querySelector('.bx-menu');
 
+// enviar correo
+// const btnSendEmail = document.getElementById('sendEmail')
+
+// btnSendEmail.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const email = document.getElementById('name').value;
+//     const name = document.getElementById('email').value;
+//     const message = document.getElementById('message').value;
+
+//     window.location.href=`mailto:josueventura@gmail.com?subject=envioDesdeFormulario&body=Name%3A${name}%0AEmail%3A${email}%0AMessage%3A${message}`
+// })
+
+
 /*------Slider-------------*/
 const sliderPrev = document.querySelector('.slider_prev');
 const sliderNext = document.querySelector('.slider_next');
