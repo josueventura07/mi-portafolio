@@ -51,7 +51,7 @@ function Next() {
         sliderTrasnlateContainer.insertAdjacentElement('beforeend', sliderSectionFirst);
         sliderTrasnlateContainer.style.marginLeft = "-100%";
         
-    }, 500);
+    }, 200);
 }
 
 
@@ -109,6 +109,7 @@ btnDarkMode.addEventListener('click', (e) => {
 navList.forEach(element => {
     element.addEventListener('click', (e) => {
         navBar.classList.toggle('navbar_hidden')
+        bxMenu.classList.toggle('bx-menu-hide')
     });
 });
 

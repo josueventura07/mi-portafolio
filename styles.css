@@ -33,8 +33,8 @@ a {
     --colorMenu: rgba(192, 59, 6);
 
     /*-------Dark Mode---------*/
-    --bg-navDark: #ccc4;
-    --bg-navBarDark: #ccc4;
+    --bg-navDark: rgb(8, 90, 79);
+    --bg-navBarDark: rgb(8, 90, 79);
     --bg-homeDark: url(./bg_images/jefferson-santos-9SoCnyQmkzI-unsplash.jpg);
     --bg-aboutDark: url(./bg_images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
     --bg-skillsDark: url(./bg_images/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall.jpg);
@@ -222,6 +222,7 @@ a {
 
 .home {
     background-image: var(--bg-home);
+    background-position: center;
 }
 
 .bgHomeDarkMode {
@@ -417,7 +418,7 @@ a {
 .about_container {
     width: 100%;
     max-width: 1024px;
-    height: 90%;
+    height: 100%;
     margin: auto;
     /* border: 1px solid wheat; */
     display: flex;
@@ -518,7 +519,7 @@ a {
 .skills_container {
     width: 100%;
     max-width: 1024px;
-    height: 90%;
+    height: 100%;
     margin: auto;
     /* border: 1px solid wheat; */
     display: flex;
